@@ -1,0 +1,17 @@
+@use '../utils/variables';
+@use '../utils/functions';
+@use 'sass:map';
+
+.hidden {
+    display: none;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+@each $color-name in map.keys(variables.$color-map) {
+    .text-#{$color-name} {
+        color: functions.color($color-name);
+    }
+}

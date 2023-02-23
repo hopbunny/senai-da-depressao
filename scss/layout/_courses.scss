@@ -1,0 +1,84 @@
+@use '../utils/functions';
+@use '../utils/breaking-point';
+@use '../utils/variables';
+
+$cardPadding: functions.px-to-rem(12px);
+$cardBorderRadius: functions.px-to-rem(8px);
+
+.courses {
+    margin-bottom: functions.px-to-rem(16px);
+    
+    &__title {
+        @include functions.font-scale(2);
+    }
+
+    &__wrapper {
+        margin-top: functions.px-to-rem(32px);
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: functions.px-to-rem(24px);
+
+        & > a {
+            display: block;
+            flex-grow: 1;
+            flex-basis: 300px;
+
+            @include breaking-point.md {
+                max-width: 270px;
+            }
+        }
+    }
+
+    &__course {
+        background-image: linear-gradient(45deg, rgba(#000, 0.25), rgba(#000, 0));
+        padding: $cardPadding;
+        border-radius: $cardBorderRadius;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.card {
+    &__thumb {
+        width: calc(100% + ($cardPadding * 2));
+        border-radius: $cardBorderRadius $cardBorderRadius 0 0;
+        margin: calc($cardPadding * -1);
+        margin-bottom: 0;
+    }
+
+    &__title {
+        font-weight: 400;
+        @include functions.font-scale(1.3);
+        margin-top: functions.px-to-rem(8px);
+        margin-bottom: functions.px-to-rem(4px);
+    }
+
+    &__desc {
+        opacity: 0.9;
+    }
+
+    &__references-wrapper {
+        display: flex;
+        align-items: center;
+        gap: functions.px-to-rem(8px);
+        margin-top: functions.px-to-rem(8px);
+    }
+
+    &__reference {
+        display: flex;
+        align-items: center;
+        gap: functions.px-to-rem(4px);
+        opacity: 0.8;
+
+        &__icon {
+            max-width: functions.px-to-rem(16px);
+            width: 100%;
+        }
+
+        &__value {
+            @include functions.font-scale(0.9);
+        }
+    }
+}

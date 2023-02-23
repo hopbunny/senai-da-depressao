@@ -1,0 +1,57 @@
+@use '../utils/functions';
+@use '../utils/variables';
+@use '../utils/breaking-point';
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: functions.px-to-rem(8px);
+    margin: functions.px-to-rem(64px) auto;
+
+    &__content {
+        @include breaking-point.lg {
+            max-width: 50%;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        @include functions.font-scale(4);
+        line-height: 100%;
+
+        @include breaking-point.lg {
+            text-align: left;
+        }
+    }
+
+    &__cta {
+        margin-top: functions.px-to-rem(16px);
+        width: 100%;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: functions.px-to-rem(12px);
+        cursor: pointer;
+
+        & > svg {
+            max-width: functions.px-to-rem(24px);
+            width: 100%;
+            transform: rotate(45deg);
+        }
+        
+        @include breaking-point.lg {
+            width: fit-content;
+        }
+    }
+
+    &__img {
+        display: none;
+        max-width: 40%;
+
+        @include breaking-point.lg {
+            display: block;
+        }
+    }
+}

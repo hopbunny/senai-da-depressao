@@ -1,0 +1,70 @@
+@use  '../utils/functions';
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    transform: translateY(-100%);
+    
+    &--show {
+        transform: none;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(#000000, 0.15);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity ease-in-out 0.2s 0.3s;
+    }
+
+    &--show &__overlay {
+        opacity: 1;
+    }
+
+    &__content {
+        background-color: functions.color(background);
+        padding-top: functions.px-to-rem(16px);
+        padding-bottom: functions.px-to-rem(16px);
+        box-shadow: 0 0 functions.px-to-rem(32px) rgba(#000000, 0.6);
+        position: relative;
+        transform: translateY(-100%);
+        transition: transform ease-in-out 0.3s;
+        
+        & > .container {
+            max-height: 70vh;
+            overflow: auto;
+        }
+    }
+    
+    &--show &__content {
+        transform: none;
+    }
+
+    &__close-button {
+        background-color: functions.color(background);
+        border: 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translateY(99%);
+        padding: functions.px-to-rem(1.3px);
+        border-radius: 0 0 functions.px-to-rem(4px) functions.px-to-rem(4px);
+        cursor: pointer;
+
+        &__icon {
+            max-width: functions.px-to-rem(35px);
+            width: 100%;
+        }
+    }
+}
+
+.search-modal__results-wrapper:is(:empty) {
+    margin-top: 0 !important;
+}

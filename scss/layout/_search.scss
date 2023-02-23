@@ -1,0 +1,51 @@
+@use '../utils/functions';
+@use '../utils/breaking-point';
+
+.search-input {
+    padding: functions.px-to-rem(12px);
+    padding-left: functions.px-to-rem(38px);
+    border-radius: functions.px-to-rem(8px);
+    border: 0;
+    background: rgba(#fff, 0.2);
+    width: 100%;
+    color: functions.color(light);
+    
+    &::placeholder {
+        color: functions.color(light);
+        opacity: 0.5;
+    }
+    
+    &__group {
+        position: relative;
+        width: 100%;
+        
+        @include breaking-point.md {
+            max-width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: functions.px-to-rem(8px);
+        transform: translateY(-50%);
+        max-width: functions.px-to-rem(24px);
+        width: 100%;
+    }
+
+    &__not-found {
+        margin-top: functions.px-to-rem(32px);
+        display: none;
+        place-items: center;
+        
+        &--show {
+            display: grid;
+        }
+
+        &__icon {
+            max-width: functions.px-to-rem(32px);
+            width: 100%;
+        }
+    }
+}

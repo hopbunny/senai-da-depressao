@@ -1,0 +1,17 @@
+$font-family: Mulish, sans-serif;
+$base-font-size: 16px;
+$container-size: 1300px;
+$header-height: calc(78.750px + 32px);
+
+$color-map: (
+    primary: (default: #82b9ec),
+    background: (default: #5b329c),
+    light: (default: #F7ECE1),
+    dark: (default: #16141b),
+);
+
+$gradient-map: (
+    background: linear-gradient(-45deg, #2a3066, #352353, #1e2e47)
+);
+
+$button-themes: [primary];

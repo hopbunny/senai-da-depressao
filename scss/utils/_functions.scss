@@ -1,0 +1,19 @@
+@use './variables';
+@use 'sass:map';
+
+@function color($color-name, $color-variant: default, $opacity: 1) {
+    $variants: map.get(variables.$color-map, $color-name);
+    @return rgba(map.get($variants, $color-variant), $opacity);
+}
+
+@function gradient($name) {
+    @return map.get(variables.$gradient-map, $name);
+}
+
+@function px-to-rem($px) {
+    @return calc(($px / variables.$base-font-size) * 1rem);
+}
+
+@mixin font-scale($scale: 1.0) {
+    font-size: px-to-rem(variables.$base-font-size * $scale);
+}

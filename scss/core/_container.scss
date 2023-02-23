@@ -1,0 +1,10 @@
+@use '../utils/variables';
+
+.container {
+    max-width: variables.$container-size;
+    padding: 0 3%;
+
+    &--center {
+        margin: 0 auto;
+    }
+}

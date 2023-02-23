@@ -1,0 +1,9 @@
+@use '../utils/functions';
+
+body {
+    background-image: functions.gradient(background);
+    color: functions.color(light);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

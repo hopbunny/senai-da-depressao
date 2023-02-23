@@ -1,0 +1,30 @@
+@use '../utils/variables';
+@use '../utils/functions';
+
+@mixin normal($color) {
+    --bg-color: #{$color};
+    --color: #100F0E;
+}
+
+.button {
+    background-color: var(--bg-color);
+    color: var(--color);
+    padding: functions.px-to-rem(16px)  functions.px-to-rem(25px);
+    border-radius: functions.px-to-rem(4px);
+    @include functions.font-scale(0.92);
+    transition: filter ease-in-out 0.3s;
+    font-weight: 700;
+    letter-spacing: functions.px-to-rem(0.5px);
+    text-transform: uppercase;
+    border: none;
+    
+    &:hover, &:focus {
+        filter: brightness(110%);
+    }
+}
+
+@each $color-name in variables.$button-themes {
+    .button--#{$color-name} {
+        @include normal(functions.color($color-name));
+    }
+}
