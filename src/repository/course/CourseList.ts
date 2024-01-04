@@ -2,18 +2,26 @@ import { Course } from "../../types/Course";
 
 export default <Course[]>[
     {
+        title: 'Imersão em Roleplay',
+        desc: '',
+        duration: '42 segundos',
+        stars: 5.0,
+        thumb: '/img/cursos/senai-15.jpg',
+        url: 'https://www.youtube.com/shorts/Xnsbo3sCDkk'
+    },
+    {
         title: 'Roteirista de Hentai',
         desc: '',
-        duration: '38 segundos',
+        duration: '26 segundos',
         stars: 5.0,
         thumb: '/img/cursos/senai-10.jpg',
-        url: 'https://www.youtube.com/watch?v=sXbGxqa2waE'
+        url: 'https://www.youtube.com/watch?v=wTryeQVLSlw'
     },
     {
         title: 'Agiotagem',
         desc: '',
         duration: '35 segundos',
-        stars: 4.5,
+        stars: 4.8,
         thumb: '/img/cursos/senai-1.jpg',
         url: 'https://www.youtube.com/watch?v=buoMMFtqNxU0'
     },
@@ -38,7 +46,7 @@ export default <Course[]>[
         title: 'Trocador de Preço de Posto',
         desc: '',
         duration: '47 segundos',
-        stars: 3.5,
+        stars: 4.0,
         thumb: '/img/cursos/senai-4.jpg',
         url: 'https://www.youtube.com/watch?v=OfkWOKF8Jes'
     },
@@ -46,7 +54,7 @@ export default <Course[]>[
         title: 'Transporte de Tabaco',
         desc: '',
         duration: '1 minutos',
-        stars: 3.8,
+        stars: 4.4,
         thumb: '/img/cursos/senai-5.jpg',
         url: 'https://www.youtube.com/watch?v=Sy58BAG1g1U'
     },
@@ -54,7 +62,7 @@ export default <Course[]>[
         title: 'Árbitro de Rinha de Aspirador Robô',
         desc: '',
         duration: '36 segundos',
-        stars: 3.0,
+        stars: 3.5,
         thumb: '/img/cursos/senai-6.jpg',
         url: 'https://www.youtube.com/watch?v=TmWJa0cVZvM'
     },
@@ -70,15 +78,15 @@ export default <Course[]>[
         title: 'Tecladista de Churrascaria',
         desc: '',
         duration: '42 segundos',
-        stars: 3.5,
+        stars: 3.8,
         thumb: '/img/cursos/senai-3.jpg',
         url: 'https://www.youtube.com/watch?v=PNmLEqgGme4'
     },
     {
         title: 'Bolar Baseado',
         desc: '',
-        duration: '45 segundos',
-        stars: 4.2,
+        duration: '46 segundos',
+        stars: 4.6,
         thumb: '/img/cursos/senai-9.jpg',
         url: 'https://www.youtube.com/watch?v=KlEERme9hBk'
     },
@@ -94,7 +102,7 @@ export default <Course[]>[
         title: 'Adestramento de Papagaios',
         desc: '',
         duration: '20 segundos',
-        stars: 4.6,
+        stars: 4.1,
         thumb: '/img/cursos/senai-12.jpg',
         url: 'https://www.youtube.com/shorts/Yh6wVQFC1lc'
     },
@@ -102,7 +110,7 @@ export default <Course[]>[
         title: 'Fabricação de Cachorro Motoserra',
         desc: '',
         duration: '1 minuto',
-        stars: 3.0,
+        stars: 4.0,
         thumb: '/img/cursos/senai-13.png',
         url: 'https://www.youtube.com/watch?v=4LfVJDWnz-4'
     },
